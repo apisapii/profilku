@@ -1,0 +1,47 @@
+/* Styles for Tentangku profile page */
+:root{
+  --bg:#0f1724; --card:#0b1220; --muted:#98a0b3; --accent:#7c3aed; --glass:rgba(255,255,255,0.04);
+  --surface:#0b1220; --text:#e6eef8;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#071029 0%,#0b1220 100%);color:var(--text);-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.site-header{backdrop-filter:blur(6px);background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;gap:14px;align-items:center}
+.avatar{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;font-weight:700}
+.name{margin:0;font-size:1.15rem}
+.role{margin:0;color:var(--muted)}
+.btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;display:inline-block}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.btn.small{padding:6px 10px;font-size:.9rem}
+.hero{display:flex;gap:28px;align-items:stretch;padding:36px 0}
+.hero-left{flex:1}
+.hero-right{width:240px}
+.lead{color:var(--muted);line-height:1.5}
+.cta-row{margin-top:18px;display:flex;gap:12px}
+.card{background:var(--glass);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.stats{display:grid;grid-template-columns:1fr;gap:12px}
+.stat{display:flex;flex-direction:column;align-items:flex-start}
+.stat strong{font-size:1.25rem}
+.grid{display:grid;gap:18px}
+.grid.two{grid-template-columns:1fr 1fr}
+.skills{list-style:none;padding:0;margin:0}
+.skills li{margin:12px 0}
+.skills .bar{background:rgba(255,255,255,0.04);height:10px;border-radius:8px;overflow:hidden}
+.skills .bar > div{height:100%;background:linear-gradient(90deg,var(--accent),#06b6d4);width:0%;transition:width 1.2s ease}
+.timeline .item{background:var(--surface);padding:12px;border-radius:8px;margin:8px 0}
+.grid.cards{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.proj{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:10px}
+.contact-row{display:flex;gap:12px}
+.site-footer{padding:18px 0;text-align:center;color:var(--muted)}
+.accent{color:var(--accent)}
+/* Responsive */
+@media (max-width:800px){
+  .hero{flex-direction:column}
+  .hero-right{width:100%}
+  .grid.two{grid-template-columns:1fr}
+}
+/* Small animations */
+.fade-up{opacity:0;transform:translateY(8px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.inview{opacity:1;transform:none}
